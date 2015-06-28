@@ -27,11 +27,14 @@ set number
 set ignorecase
 set smartcase
 
-" Keep the same indentation as the current line
-set autoindent
-
 " Display the cursor position
 set ruler
 
 " Disable line wrapping
 set nowrap
+
+" Configuring default indentation
+set autoindent
+set expandtab
+set shiftwidth=2
+set softtabstop=2
