@@ -20,52 +20,45 @@
             endif
         endif
     " }
-
-    " Bundle support {
-        filetype on
-        filetype off
-
-        set runtimepath+=~/.vim/bundle/Vundle.vim
-
-        call vundle#rc()
-    " }
 " }
 
 " Bundles {
+    " {
+        call plug#begin()
+    " }
+
     " Dependencies {
-        Bundle 'gmarik/vundle'
-        Bundle 'MarcWeber/vim-addon-mw-utils'
-        Bundle 'tomtom/tlib_vim'
+        Plug 'MarcWeber/vim-addon-mw-utils'
+        Plug 'tomtom/tlib_vim'
     " }
 
     " General {
-        Bundle 'scrooloose/nerdtree'
-        Bundle 'tomasr/molokai'
-        Bundle 'baskerville/bubblegum'
-        Bundle 'tpope/vim-surround'
-        Bundle 'kien/ctrlp.vim'
-        Bundle 'matchit.zip'
-        Bundle 'Lokaltog/vim-easymotion'
-        Bundle 'tpope/vim-abolish'
-        Bundle 'spf13/vim-autoclose'
+        Plug 'scrooloose/nerdtree'
+        Plug 'tomasr/molokai'
+        Plug 'tpope/vim-surround'
+        Plug 'kien/ctrlp.vim'
+        Plug 'matchit.zip'
+        Plug 'tpope/vim-abolish'
+        Plug 'spf13/vim-autoclose'
     " }
 
     " General programming {
-        Bundle 'tpope/vim-fugitive'
-        Bundle 'tomtom/tcomment_vim'
+        Plug 'tpope/vim-fugitive'
+        Plug 'tomtom/tcomment_vim'
 
         if executable('ctags')
-            Bundle 'majutsushi/tagbar'
+            Plug 'majutsushi/tagbar'
         endif
     " }
 
     " Snippets / Completion
-        Bundle 'garbas/vim-snipmate'
-        Bundle 'honza/vim-snippets'
-        Bundle 'ervandew/supertab'
+        Plug 'garbas/vim-snipmate'
+        Plug 'honza/vim-snippets'
+        Plug 'ervandew/supertab'
     " }
 
-    " Perl {
+    " {
+        call plug#end()
     " }
 " }
 
@@ -101,7 +94,7 @@
 " Vim UI {
     set background=dark
 
-    if filereadable(expand('~/.vim/bundle/molokai/colors/molokai.vim'))
+    if filereadable(expand('~/.vim/plugged/molokai/colors/molokai.vim'))
         let g:molokai_original=0
         let g:rehash256=1
 
